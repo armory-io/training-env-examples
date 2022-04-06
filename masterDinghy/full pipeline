@@ -2,6 +2,8 @@
     "application": "jmoon",
     "pipelines": [
 {
+  "application": "jmoon",
+  "name": "Dinghytester",
   "appConfig": {},
   "keepWaitingPipelines": false,
   "lastModifiedBy": "anonymous",
