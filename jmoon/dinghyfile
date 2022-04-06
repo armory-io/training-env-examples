@@ -3,7 +3,7 @@
     "pipelines": [
         {
             "application": "jmoon",
-            "name": "DinghyValidator",
+            "name": "DinghyTester",
             "appConfig": {},
             "keepWaitingPipelines": false,
             "lastModifiedBy": "anonymous",
