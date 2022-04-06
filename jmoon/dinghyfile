@@ -1,7 +1,7 @@
 {
     "application": "jmoon",
     "pipelines": [
-        {
+{
             "application": "jmoon",
             "name": "DinghyTester",
             "appConfig": {},
@@ -9,7 +9,7 @@
             "lastModifiedBy": "anonymous",
             "limitConcurrent": true,
             "parameterConfig": [
-    {
+{
       "default": "Test-Default",
       "description": "Terraform Workspace",
       "hasOptions": false,
