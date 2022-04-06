@@ -1,16 +1,14 @@
 {
     "application": "jmoon",
     "pipelines": [
-        {
-            "application": "jmoon",
-            "name": "DinghyValidation-Tests",
-            "appConfig": {},
-            "keepWaitingPipelines": false,
-            "lastModifiedBy": "anonymous",
-            "limitConcurrent": true,
-            "parameterConfig": [
+{
+  "appConfig": {},
+  "keepWaitingPipelines": false,
+  "lastModifiedBy": "anonymous",
+  "limitConcurrent": true,
+  "parameterConfig": [
     {
-      "default": "TEST1",
+      "default": "Workspace1",
       "description": "Terraform Workspace",
       "hasOptions": false,
       "label": "",
@@ -295,10 +293,13 @@
       "baseLabel": "release",
       "baseOs": "focal",
       "cloudProviderType": "aws",
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": false,
       "extendedAttributes": {
         "aws_associate_public_ip_address": "false",
         "aws_ena_support": "true"
       },
+      "failPipeline": true,
       "name": "Bake",
       "package": "awscli nginx",
       "refId": "6",
@@ -309,7 +310,7 @@
       "requisiteStageRefIds": [],
       "storeType": "ebs",
       "type": "bake",
-      "user": "admin@alcspintest.com",
+      "user": "justin.moon",
       "vmType": "hvm"
     },
     {
@@ -443,14 +444,8 @@
       "action": "plan",
       "artifacts": [
         {
-          "account": "gh-repo",
-          "artifact": {
-            "artifactAccount": "gh-repo",
-            "id": "750b04ae-c85d-42a3-90e9-1926ac608d35",
-            "reference": "https://github.com/${parameters.orgRepo}.git",
-            "type": "embedded/base64",
-            "version": "${parameters.branch}"
-          }
+          "account": "training-env-examples",
+          "id": "52a60a6f-9240-4dcc-ada3-322e9bc8b715"
         }
       ],
       "backendArtifact": {
@@ -501,13 +496,7 @@
       "artifacts": [
         {
           "account": "gh-repo",
-          "artifact": {
-            "artifactAccount": "gh-repo",
-            "id": "1bf69751-f0a4-4395-9cd7-81757cdf15e5",
-            "reference": "https://github.com/${parameters.orgRepo}.git",
-            "type": "embedded/base64",
-            "version": "${parameters.branch}"
-          }
+          "id": "5001aba2-bf4b-4dcd-a676-a4e5ec2cac06"
         },
         {
           "account": "",
@@ -549,17 +538,16 @@
       "type": "manualJudgment"
     },
     {
-      "account": "",
+      "account": "jmoon-kubernetes",
       "alias": "runJob",
       "application": "terraformer",
       "cloudProvider": "kubernetes",
-      "credentials": "",
+      "credentials": "jmoon-kubernetes",
       "manifest": {
         "apiVersion": "batch/v1",
         "kind": "Job",
         "metadata": {
-          "generateName": "emptybucket-",
-          "namespace": "runjob"
+          "generateName": "emptybucket-"
         },
         "spec": {
           "backoffLimit": 0,
@@ -596,6 +584,6 @@
   ],
   "triggers": [],
   "updateTs": "1643673058000"
-        }
+}
     ]
 }
