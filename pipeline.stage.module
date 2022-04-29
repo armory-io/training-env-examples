@@ -4,7 +4,7 @@
     "failPipeline": true,
     "isNew": true,
     "name": "Pipeline",
-    "refId": "1",
+    "refId": "0",
     "requisiteStageRefIds": [],
     "type": "pipeline",
     "waitForCompletion": true
