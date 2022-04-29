@@ -7,7 +7,7 @@
       "limitConcurrent": true,
       "name": "Made By Armory Pipeline Templates",
       "stages": [
-        {{ module "wait.stage.module" "waitTime" 200 }} // Pass the "waitTime" variable with value 200 to wait.stage.module
+        {{ module "wait.stage.module" "waitTime" 200 }}
       ],
       "triggers": []
     }
