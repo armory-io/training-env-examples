@@ -5,17 +5,7 @@
       "application": "austinapp",
       "name": "Test Pipeline ID",
       "stages": [
-        {
-        "application": "austinapp",
-        "pipeline": "{{ pipelineID "austinapp" "TESTING" }}",
-        "failPipeline": true,
-        "isNew": true,
-        "name": "Pipeline",
-        "refId": "1",
-        "requisiteStageRefIds": [],
-        "type": "pipeline",
-        "waitForCompletion": true
-        }
+      {{ module module.pipeline.stage "app" "austinapp" "pipeline" "Pipeline A" }}
       ]
     }
   ]
