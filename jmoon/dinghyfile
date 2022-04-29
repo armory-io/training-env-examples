@@ -5,9 +5,9 @@
       "application": "austinapp",
       "keepWaitingPipelines": false,
       "limitConcurrent": true,
-      "name": "WAIT STAGE PIPELINE",
+      "name": "Test Pipeline ID",
       "stages": [
-        {{ module "wait.stage.module" "waitTime" 200 }}
+        {{ module "pipeline.stage.module" "app" "austinapp" "pipeline" "Pipeline A" }}
       ],
       "triggers": []
     }
