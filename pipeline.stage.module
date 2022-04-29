@@ -1,6 +1,6 @@
 {
     "application": {{ var "app" }},
-    "pipeline": "{{ pipelineID "austinapp" "Pipeline A"}}",
+    "pipeline": "{{ pipelineID "jmoon" "AustinTest"}}",
     "failPipeline": true,
     "isNew": true,
     "name": "Pipeline",
