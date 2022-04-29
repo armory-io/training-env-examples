@@ -5,7 +5,7 @@
       "application": "austinapp",
       "name": "Test Pipeline ID",
       "stages": [
-      {{ module module.pipeline.stage "app" "austinapp" "pipeline" "Pipeline A" }}
+        {{ module module.pipeline.stage "app" "austinapp" "pipeline" "Pipeline A" }}
       ]
     }
   ]
