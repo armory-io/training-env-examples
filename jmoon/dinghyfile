@@ -7,7 +7,7 @@
       "limitConcurrent": true,
       "name": "Test Pipeline ID",
       "stages": [
-        {{ module "pipeline.stage.module" "app" "austinapp" "pipeline" "Pipeline A" }}
+        {{ module "pipeline.stage.module" "app" "austinapp" "pipeline" "TESTING" }}
       ],
       "triggers": []
     }
