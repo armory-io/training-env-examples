@@ -3,10 +3,13 @@
   "pipelines": [
     {
       "application": "austinapp",
-      "name": "Test Pipeline ID",
+      "keepWaitingPipelines": false,
+      "limitConcurrent": true,
+      "name": "Made By Armory Pipeline Templates",
       "stages": [
-        {{ module module.pipeline.stage "app" "austinapp" "pipeline" "Pipeline A" }}
-      ]
+        {{ module "wait.stage.module" "waitTime" 200 }} // Pass the "waitTime" variable with value 200 to wait.stage.module
+      ],
+      "triggers": []
     }
   ]
 }
