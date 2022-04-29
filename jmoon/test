@@ -1,0 +1,22 @@
+{
+  "application": "austinapp",
+  "pipelines": [
+    {
+      "application": "austinapp",
+      "name": "Test Pipeline ID",
+      "stages": [
+        {
+        "application": "austinapp",
+        "pipeline": "",
+        "failPipeline": true,
+        "isNew": true,
+        "name": "Pipeline",
+        "refId": "1",
+        "requisiteStageRefIds": [],
+        "type": "pipeline",
+        "waitForCompletion": true
+        }
+      ]
+    }
+  ]
+}
