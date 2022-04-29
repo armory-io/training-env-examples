@@ -5,7 +5,7 @@
       "application": "austinapp",
       "keepWaitingPipelines": false,
       "limitConcurrent": true,
-      "name": "Made By Armory Pipeline Templates",
+      "name": "WAIT STAGE PIPELINE",
       "stages": [
         {{ module "wait.stage.module" "waitTime" 200 }}
       ],
