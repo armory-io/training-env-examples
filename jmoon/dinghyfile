@@ -1,21 +1,6 @@
   {
     "application": "austinapp",
-    "pipelines": [{
-            "application": "austinapp",
-            "keepWaitingPipelines": false,
-            "limitConcurrent": true,
-            "name": "Pipeline B",
-            "stages": [
-            {
-                "name": "wait",
-                "refId": "1",
-                "requisiteStageRefIds": [],
-                "type": "wait",
-                "waitTime": 10
-            }
-            ],
-            "triggers": []
-        },
+    "pipelines": [
         {
             "application": "austinapp",
             "keepWaitingPipelines": false,
