@@ -11,7 +11,7 @@
         "limitConcurrent": true,
         "name": "Test Pipeline ID",
         "stages": [
-          {{ module "pipeline.stage.module" "triggerApp" $spinnakerApplicationName "triggerPipeline" $testPipelineName }} }}
+          {{ module "pipeline.stage.module" "triggerApp" $spinnakerApplicationName "triggerPipeline" $testPipelineName }}
         ],
         "triggers": []
       }
