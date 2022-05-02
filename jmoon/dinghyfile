@@ -17,20 +17,6 @@
                 "waitTime": 10
             }],
             "triggers": []
-        },
-        {
-            "application": "austinapp",
-            "keepWaitingPipelines": false,
-            "limitConcurrent": true,
-            "name": "Test Pipeline ID",
-            "stages": [
-                {{
-                    module "pipeline.stage.module"
-                    "triggerApp" {{ var spinnakerApplicationName }}
-                    "triggerPipeline" {{ var testPipelineName }}
-                }}
-            ],
-            "triggers": []
         }
     ]
 }
