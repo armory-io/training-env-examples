@@ -2,13 +2,13 @@
     "application": "austinapp",
     "globals": {
         "spinnakerApplicationName": "austinapp",
-        "testPipelineName": "Pipeline B"
+        "testPipelineName": "Pipeline A"
     },
     "pipelines": [{
             "application": "austinapp",
             "keepWaitingPipelines": false,
             "limitConcurrent": true,
-            "name": "{{ var "testPipelineName" }}",
+            "name": "Pipeline B",
             "stages": [
             {
                 "name": "wait",
