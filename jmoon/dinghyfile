@@ -28,8 +28,8 @@
             "stages": [
                 {{
                     module "pipeline.stage.module"
-                    "triggerApp" "{{ var spinnakerApplicationName }}"
-                    "triggerPipeline" "{{ var testPipelineName }}"
+                    "triggerApp" "austinapp"
+                    "triggerPipeline" "TESTING"
                 }}
             ],
             "triggers": []
