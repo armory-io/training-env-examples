@@ -2,7 +2,7 @@
   "application": "austinapp",
   "globals": {
       "spinnakerApplicationName": "austinapp",
-      "testPipelineName": "TESTING"
+      "testPipelineName": "Pipeline A"
   },
   "pipelines": [
     {
