@@ -8,7 +8,7 @@
             "application": "austinapp",
             "keepWaitingPipelines": false,
             "limitConcurrent": true,
-            "name": "{{ var testPipelineName }}",
+            "name": "{{ var "testPipelineName" }}",
             "stages": [{
                 "name": "wait",
                 "refId": "1",
