@@ -1,13 +1,28 @@
 {
   "application": "austinapp",
-  "pipelines": [
+  "pipelines": [{
+            "application": "austinapp",
+            "keepWaitingPipelines": false,
+            "limitConcurrent": true,
+            "name": "Pipeline B",
+            "stages": [
+            {
+                "name": "wait",
+                "refId": "1",
+                "requisiteStageRefIds": [],
+                "type": "wait",
+                "waitTime": 10
+            }
+            ],
+            "triggers": []
+        },
     {
       "application": "austinapp",
       "keepWaitingPipelines": false,
       "limitConcurrent": true,
       "name": "Test Pipeline ID",
       "stages": [
-        {{ module "pipeline.stage.module" }}
+        {{ module "pipeline.stage.module" "triggerApp" "austinapp" "triggerPipeline" "Pipeline B"}}
       ],
       "triggers": []
     }
