@@ -1,4 +1,4 @@
-{
+  {
     "application": "austinapp",
     "pipelines": [{
             "application": "austinapp",
@@ -15,6 +15,16 @@
             }
             ],
             "triggers": []
-        }
+        },
+        {
+            "application": "austinapp",
+            "keepWaitingPipelines": false,
+            "limitConcurrent": true,
+            "name": "Test Pipeline ID",
+            "stages": [
+              {{ module "pipeline.stage.module" "triggerApp" "austinapp" "triggerPipeline" "Pipeline B"}}
+            ],
+            "triggers": []
+          }
     ]
 }
