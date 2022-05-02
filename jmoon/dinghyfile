@@ -2,18 +2,37 @@
     "application": "austinapp",
     "globals": {
         "spinnakerApplicationName": "austinapp",
-        "testPipelineName": "TESTING"
+        "testPipelineName": "Pipeline B"
     },
-    "pipelines": [
-      {
-        "application": "austinapp",
-        "keepWaitingPipelines": false,
-        "limitConcurrent": true,
-        "name": "Test Pipeline ID",
-        "stages": [
-          {{ module "pipeline.stage.module" }}
-        ],
-        "triggers": []
-      }
+    "pipelines": [{
+            "application": "austinapp",
+            "keepWaitingPipelines": false,
+            "limitConcurrent": true,
+            "name": "{{ var "testPipelineName" }}",
+            "stages": [
+            {
+                "name": "wait",
+                "refId": "1",
+                "requisiteStageRefIds": [],
+                "type": "wait",
+                "waitTime": 10
+            }
+            ],
+            "triggers": []
+        },
+        {
+            "application": "austinapp",
+            "keepWaitingPipelines": false,
+            "limitConcurrent": true,
+            "name": "Test Pipeline ID",
+            "stages": [
+                {{
+                    module "pipeline.stage.module"
+                    "triggerApp" "austinapp"
+                    "triggerPipeline" "Pipeline B"
+                }}
+            ],
+            "triggers": []
+        }
     ]
-  }
+}
