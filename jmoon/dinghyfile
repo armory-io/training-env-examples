@@ -4,35 +4,16 @@
         "spinnakerApplicationName": "austinapp",
         "testPipelineName": "Pipeline A"
     },
-    "pipelines": [{
-            "application": "austinapp",
-            "keepWaitingPipelines": false,
-            "limitConcurrent": true,
-            "name": "Pipeline B",
-            "stages": [
-            {
-                "name": "wait",
-                "refId": "1",
-                "requisiteStageRefIds": [],
-                "type": "wait",
-                "waitTime": 11
-            }
-            ],
-            "triggers": []
-        },
-        {
-            "application": "austinapp",
-            "keepWaitingPipelines": false,
-            "limitConcurrent": true,
-            "name": "Test Pipeline ID",
-            "stages": [
-                {{
-                    module "pipeline.stage.module"
-                    "triggerApp" "austinapp"
-                    "triggerPipeline" "TESTING"
-                }}
-            ],
-            "triggers": []
-        }
+    "pipelines": [
+      {
+        "application": "austinapp",
+        "keepWaitingPipelines": false,
+        "limitConcurrent": true,
+        "name": "Test Pipeline ID",
+        "stages": [
+          {{ module "pipeline.stage.module" "triggerApp" {{ var spinnakerApplicationName }} "triggerPipeline" {{ var testPipelineName}} }}
+        ],
+        "triggers": []
+      }
     ]
-}
+  }
