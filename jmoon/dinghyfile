@@ -7,7 +7,7 @@
   },
   "pipelines": [
     {
-      "application": "dinghy",
+      "application": "jmoon",
       "keepWaitingPipelines": false,
       "limitConcurrent": {{ variable limit }},
       "name": "Simple",
