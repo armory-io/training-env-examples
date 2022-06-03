@@ -1,0 +1,39 @@
+{
+    "application": "jmoon",
+    "pipelines": [
+        {
+            "application": "jmoon",
+            "name": "DinghyModule",
+            "appConfig": {},
+            "keepWaitingPipelines": false,
+            "lastModifiedBy": "anonymous",
+            "limitConcurrent": true,
+            "parameterConfig": [
+    {
+      "default": "Test-Default",
+      "description": "Terraform Workspace",
+      "hasOptions": false,
+      "label": "",
+	@@ -66,7 +64,7 @@
+      "required": true
+    },
+    {
+      "default": "",
+      "description": "Name of S3 bucket to create",
+      "hasOptions": false,
+      "label": "",
+	@@ -80,7 +78,7 @@
+      "required": true
+    },
+    {
+      "default": "Hello There",
+      "description": "Welcome Message",
+      "hasOptions": false,
+      "label": "",
+	@@ -96,11 +94,496 @@
+  ],
+  "schema": "1",
+  "stages": [
+      {{ module "deploy.stage.module" }},
+      {{ module "cleanup.stage.module" }},
+      {{ module "destroy.stage.module" }}
