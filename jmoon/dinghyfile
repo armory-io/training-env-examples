@@ -9,25 +9,7 @@
             "lastModifiedBy": "anonymous",
             "limitConcurrent": true,
             "parameterConfig": [
-    {
-      "default": "Test-Default",
-      "description": "Terraform Workspace",
-      "hasOptions": false,
-      "label": "",
-      "required": true
-    },
-    {
-      "default": "",
-      "description": "Name of S3 bucket to create",
-      "hasOptions": false,
-      "label": "",
-      "required": true
-    },
-    {
-      "default": "Hello There",
-      "description": "Welcome Message",
-      "hasOptions": false,
-      "label": "",
+   
   ],
   "schema": "1",
   "stages": [
