@@ -14,7 +14,6 @@
       "description": "Terraform Workspace",
       "hasOptions": false,
       "label": "",
-	@@ -66,7 +64,7 @@
       "required": true
     },
     {
@@ -22,7 +21,6 @@
       "description": "Name of S3 bucket to create",
       "hasOptions": false,
       "label": "",
-	@@ -80,7 +78,7 @@
       "required": true
     },
     {
@@ -30,7 +28,6 @@
       "description": "Welcome Message",
       "hasOptions": false,
       "label": "",
-	@@ -96,11 +94,496 @@
   ],
   "schema": "1",
   "stages": [
