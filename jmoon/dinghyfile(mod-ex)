@@ -1,31 +1,17 @@
 {
   "application": "jmoon",
-  "variables": {
-    "WaitTime1": 60,
-    "WaitTime2": 60,
-    "limit": 1
-  },
   "pipelines": [
     {
       "application": "jmoon",
       "keepWaitingPipelines": false,
-      "limitConcurrent": {{ variable limit }},
-      "name": "Simple",
+      "limitConcurrent": true,
+      "name": "Made By Armory Pipeline Templates",
       "stages": [
-        {{ module "./wait.stage.module"  {Name: "waitTime", Value: 10}  }}
+        {{ module "deploy.stage.module" }},
+        {{ module "cleanup.stage.module" }},
+        {{ module "destroy.stage.module" }}
       ],
       "triggers": []
-    },
-    {{ module "./simple.pipeline.module" }}
+    }
   ]
-}
-
-
-type Variable struct {
-    Name string
-    Value interface{}
-}
-
-func module(name string, vars ...Variable) {
-
 }
