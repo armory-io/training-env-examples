@@ -93,7 +93,7 @@
   ],
       
       
-      "name": "Made By Armory Pipeline Templates",
+      "name": "Made By Armorys Pipeline Templates",
       "stages": [
         {{ module "deploy.stage.module" }},
         {{ module "cleanup.stage.module" }},
