@@ -84,7 +84,7 @@
       "name": "welcome",
       "options": [
         {
-          "value": ""
+          "value": "" 
         }
       ],
       "pinned": true,
