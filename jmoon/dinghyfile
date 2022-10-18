@@ -93,7 +93,7 @@
   ],
       
       
-      "name": "Made By Armory Pipeline Template",
+      "name": "Dinghy Thingy",
       "stages": [
         {{ module "deploy.stage.module" }},
         {{ module "cleanup.stage.module" }},
