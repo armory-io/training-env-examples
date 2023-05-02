@@ -93,7 +93,7 @@
   ],
       
       
-      "name": "Dinghy Test",
+      "name": "Dinghy Testing",
       "stages": [
         {{ module "deploy.stage.module" }},
         {{ module "cleanup.stage.module" }},
